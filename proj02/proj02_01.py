@@ -1,5 +1,5 @@
-# Name:
-# Date:
+# Name:COLLIN FRANCE
+# Date:JULY 11 17
 
 # proj02: sum
 
@@ -16,4 +16,8 @@
 # Enter a number to sum, or 0 to indicate you are finished: 2
 # Enter a number to sum, or 0 to indicate you are finished: 10
 # Enter a number to sum, or 0 to indicate you are finished: 0
-#The sum of your numbers is: 21
+#The sum of your numbers iS:2
+n1=raw_input("enter one number ")
+n2=raw_input("enter another number ")
+n1+n2
+
