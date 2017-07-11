@@ -17,7 +17,22 @@
 # Enter a number to sum, or 0 to indicate you are finished: 10
 # Enter a number to sum, or 0 to indicate you are finished: 0
 #The sum of your numbers iS:2
-n1=raw_input("enter one number ")
-n2=raw_input("enter another number ")
-n1+n2
+# True/False loop: end ewhen usr type in a 0
+# loop control variable=True
+# n1=raw_input ("enter a number")
+# sum=0
+# while loop control variable is True:
+#     if user types in 0
+#     loop control is False
+#     else raw_input ("enter a number")
+#     sum=sum +user input
+loop_control = True
+collin=0
+while loop_control == True:
+    Number=raw_input("any number to a start equation. Enter a zero to show you are finished")
+    if (Number) == "0":
+        loop_control = False
+    collin = int(Number) + collin
+print (collin),'is the sum'
+
 
