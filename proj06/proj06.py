@@ -1,5 +1,5 @@
-# Name:
-# Date:
+# Name:Collin and Jack
+# Date:July 13 2017
 
 
 # proj06: Hangman
@@ -43,6 +43,32 @@ def choose_word(wordlist):
 # actually load the dictionary of words and point to it with 
 # the wordlist variable so that it can be accessed from anywhere
 # in the program
+#x = user input
 wordlist = load_words()
 
 # your code begins here!
+word = choose_word(wordlist)
+lst1 = []
+for letter in word:
+    lst1.append(letter)
+print lst1
+lst2 = []
+for letter in word:
+    lst2.append("_")
+print lst2
+
+counter = 0
+while counter < 12:
+    x = raw_input("Enter a letter, for the hangmans life is on the line. To speed up the execution type zero :")
+    counter = counter +1
+    if counter == 12:
+        print "Game over. The hangmans blood is on your hands."
+    if x == '0':
+        print "Game over. The hangmans blood is on your hands."
+        counter = 12
+if lst1 == lst2:
+    print "You win"
+counter = 0
+
+
+
