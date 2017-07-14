@@ -39,32 +39,37 @@ def choose_word(wordlist):
 
 # end of helper code
 # -----------------------------------
-
+#lst1 = word list, lst2 = _, lst3 = letters guessed in alphabet
 # actually load the dictionary of words and point to it with 
 # the wordlist variable so that it can be accessed from anywhere
 # in the program
 #x = user input
 wordlist = load_words()
-
+print "Lets play some hangman!!!"
 # your code begins here!
 word = choose_word(wordlist)
 lst1 = []
 for letter in word:
     lst1.append(letter)
-print lst1
+
 lst2 = []
 for letter in word:
     lst2.append("_")
 print lst2
 
+lst3 = []
+
 counter = 0
-while counter < 12:
+while counter < 14:
     x = raw_input("Enter a letter, for the hangman's life is on the line. To speed up the execution type zero :")
+    lst3.append(x)
+    print lst3, "Letters guessed"
     counter = counter + 1
+    print (14 - counter), "guesses left."
     if x in lst1:
         print "Correct!"
     else:
-        print "Just terrible!"
+        print "Terrible!"
     if x in lst1:
         counter2 = 0
         while counter2 < len(word):
@@ -72,14 +77,15 @@ while counter < 12:
                 lst2[counter2] = x
             counter2 = counter2 + 1
         print lst2
-    if counter == 12:
-        print "Game over. The hangman's blood is on your hands."
+    if counter == 14:
+        print "Game over. The hangman's blood is on your hands. Also the word was",(word)
     elif x == '0':
-        print "Game over. The hangman's blood is on your hands."
-        counter = 12
-    if lst1 == lst2:
-        print "You win"
-       
+        print "Game over. The hangman's blood is on your hands. Also, the word was",(word)
+        counter = 14
+    elif lst1 == lst2:
+        print "You win! The hangman is forever in your debt."
+        counter = 14
+
 
 
 
