@@ -59,16 +59,34 @@ print lst2
 
 counter = 0
 while counter < 12:
-    x = raw_input("Enter a letter, for the hangmans life is on the line. To speed up the execution type zero :")
-    counter = counter +1
+    x = raw_input("Enter a letter, for the hangman's life is on the line. To speed up the execution type zero :")
+    counter = counter + 1
+    if x in lst1:
+        print "Correct!"
+    else:
+        print "Just terrible!"
+    if x in lst1:
+        counter2 = 0
+        while counter2 < len(word):
+            if x == lst1[counter2]:
+                lst2[counter2] = x
+            counter2 = counter2 + 1
+        print lst2
     if counter == 12:
-        print "Game over. The hangmans blood is on your hands."
-    if x == '0':
-        print "Game over. The hangmans blood is on your hands."
+        print "Game over. The hangman's blood is on your hands."
+    elif x == '0':
+        print "Game over. The hangman's blood is on your hands."
         counter = 12
-if lst1 == lst2:
-    print "You win"
-counter = 0
+    if lst1 == lst2:
+        print "You win"
+       
 
 
 
+
+
+
+
+#if letter is not in the list, what happens?
+#add letters to list if they are correct
+#keep track of letters that have been guessed
